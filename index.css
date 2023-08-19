@@ -1,0 +1,230 @@
+/* Resetting the CSS Properties */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #141414;
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 100;
+    transition: all .4s ease;
+}
+
+header.black_bg {
+    background-color: rgb(20, 20, 20);
+}
+
+.head_cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.left_cont, .right_cont {
+    display: flex;
+    align-items: center;
+}
+
+.left_cont .logo {
+    cursor: pointer;
+}
+
+.left_cont .navbar {
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+.left_cont .navbar .nav_links {
+    list-style: none;
+    margin-right: 1rem;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.left_cont .navbar .nav_links.active {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.left_cont .navbar .nav_links:hover {
+    opacity: 1;
+}
+
+.right_cont svg, .right_cont img {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.right_cont .account_image {
+    width: 40px;
+}
+/* Header Section */
+
+/* Banner Section */
+
+.banner {
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.banner_container {
+    padding-top: 7rem;
+    height: 100vh;
+}
+
+.banner_section .banner_container .banner_heading {
+    font-size: 4rem;
+}
+
+.banner_section .banner_container .banner_info {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.1rem;
+}
+
+.banner_section .banner_container .banner_heading ,
+.banner_section .banner_container .banner_info,
+.banner_section .banner_container .banner_overview {
+    color: #fff;
+}
+
+.banner_section .banner_container .banner_overview {
+    max-width: 55%;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.action_buttons {
+    display: flex;
+    column-gap: .8rem;
+}
+
+.action_buttons .action_button {
+    display: flex;
+    align-items: center;
+    column-gap: .6rem;
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .3rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action_buttons .more_info {
+    background-color: #666;
+    color: #fff;
+}
+
+.fadebottom {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg, 
+        transparent, 
+        rgba(37,37,37,.61), 
+        #141414
+    );
+}
+
+/* Banner Section */
+
+/* Movies Section */
+
+/* Trending Now Movies */
+.movies_section {
+    margin-top: 4rem;
+}
+
+.movies_container {
+    margin-bottom: 3rem;
+}
+
+.movies_container::-webkit-scrollbar {
+    display: none;
+}
+
+.movies_category_heading {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.explore_all {
+    font-size: .8rem;
+    color: rgb(0, 140, 255);
+    margin-left: .7rem;
+    transition: all .3s ease;
+    display: none;
+}
+
+.movies_category_heading:hover .explore_all {
+    display: inline-block;
+}
+
+.movies_list {
+    display: flex;
+    margin-top: .7rem;
+    overflow: hidden;
+}
+
+.movie_item {
+    width: 241px;
+    margin-right: .3rem;
+    transition: transform linear .3s;
+    cursor: pointer;
+    object-fit: contain;
+    position: relative;
+}
+
+.movie_item .movie_img {
+    width: inherit;
+    cursor: pointer;
+}
+
+.movie_iframe {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.movie_item:hover .movie_iframe {
+    display: block;
+}
+
+/* Movies Section */
+
+/* Utility Classes */
+.none {
+    display: none;
+}
